@@ -6,30 +6,29 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 10:28:27 by vafavard          #+#    #+#             */
-/*   Updated: 2025/05/06 14:56:57 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/05/07 20:15:24 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 
-#define FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include "../libft/libft.h"
-#include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdarg.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdint.h>
 
-//display specials
-int print_c(unsigned int args);
-int print_s(char *args);
-int print_d_and_i(int args);
-int print_u(unsigned int args);
-// int print_hex_top(long args);
-// int print_hex_low(long args);
-
-int	display_specials(const char *str, va_list args);
-void ft_putchar(char c);
-
-int ft_printf(const char *str, ...);
+void	ft_putchar(char c);
+int		print_c(unsigned int args);
+int		print_s(char *args);
+int		print_d_and_i(int args);
+int		print_u(unsigned int args);
+int		print_hex_low(int args);
+int		print_hex_top(int args);
+int		print_p(uintptr_t addr);
+int		display_specials(const char *str, va_list *args);
+int		ft_printf(const char *str, ...);
+int		t_percent(void);
 
 #endif
