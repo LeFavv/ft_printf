@@ -6,9 +6,10 @@
 #    By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 17:02:02 by vafavard          #+#    #+#              #
-#    Updated: 2025/05/07 19:40:31 by vafavard         ###   ########.fr        #
+#    Updated: 2025/05/08 10:48:34 by vafavard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME = libftprintf.a
 CC = gcc

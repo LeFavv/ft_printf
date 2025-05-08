@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 14:02:42 by vafavard          #+#    #+#             */
-/*   Updated: 2025/05/07 20:41:14 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/05/08 10:53:17 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ int	ft_printf(const char *str, ...)
 	va_list	args;
 	int		ret;
 
+	if (!str)
+		return (-1);
 	va_start(args, str);
 	letter_count = 0;
 	while (*str)
@@ -78,8 +80,6 @@ int	ft_printf(const char *str, ...)
 			str++;
 			ret = display_specials(str, &args);
 			str++;
-			if (ret == -1)
-				return (-1);
 			letter_count += ret;
 		}
 		else
