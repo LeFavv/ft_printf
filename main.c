@@ -80,8 +80,8 @@ int main(void)
 	//int	a;
 	int nb1;
 	int nb2;
-	nb1 = printf("Le %s ultime %d est la meilleur %c%c%c%c%c %p, %x %X\n\n", "test", 42, 'e', 'c', 'o', 'l', 'e', &a,42, 42);
-	nb2 = ft_printf("Le %s ultime %d est la meilleur %c%c%c%c%c %p, %x %X\n\n", "test", 42, 'e', 'c', 'o', 'l', 'e', &a,42, 42);
+	nb1 = printf("Le %s ultime %d est la%%%%%% meilleur %c%c%c%c%c %p, %x %X\n\n", "test", 42, 'e', 'c', 'o', 'l', 'e', &a,42, 42);
+	nb2 = ft_printf("Le %s ultime %d est%%%%%% la meilleur %c%c%c%c%c %p, %x %X\n\n", "test", 42, 'e', 'c', 'o', 'l', 'e', &a,42, 42);
 	printf("printf = %d\n", nb1);
 	ft_printf("ft_printf = %d\n", nb2);
 
