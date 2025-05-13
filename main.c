@@ -85,5 +85,9 @@ int main(void)
 	printf("printf = %d\n", nb1);
 	ft_printf("ft_printf = %d\n", nb2);
 
+	printf(" %p  %p  ", NULL, NULL);
+	printf("\n");
+	ft_printf(" %p  %p  ", NULL, NULL);
+	printf("\n");
     return (0);
 }

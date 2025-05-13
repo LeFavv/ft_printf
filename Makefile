@@ -6,7 +6,7 @@
 #    By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/07 17:02:02 by vafavard          #+#    #+#              #
-#    Updated: 2025/05/08 10:48:34 by vafavard         ###   ########.fr        #
+#    Updated: 2025/05/13 16:45:19 by vafavard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM = rm -f
 AR = ar
 ARFLAGS = rcs
 HEADER = ft_printf.h
-SRCS	= 	ft_printf.c hexa.c print_chars.c print_dec.c
+SRCS	= 	ft_printf.c ft_print_p.c ft_print_hexa.c ft_print_chars.c ft_print_dec.c
 
 OBJS = $(SRCS:.c=.o)
 

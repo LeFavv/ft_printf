@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 10:28:27 by vafavard          #+#    #+#             */
-/*   Updated: 2025/05/07 23:41:20 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/05/13 16:40:00 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int		print_p(uintptr_t addr);
 int		display_specials(const char *str, va_list *args);
 int		ft_printf(const char *str, ...);
 int		t_percent(void);
+int		check_value(uintptr_t temp);
 
 #endif

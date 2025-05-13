@@ -6,7 +6,7 @@
 /*   By: vafavard <vafavard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 14:02:42 by vafavard          #+#    #+#             */
-/*   Updated: 2025/05/08 10:53:17 by vafavard         ###   ########.fr       */
+/*   Updated: 2025/05/13 16:42:19 by vafavard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,6 @@
 void	ft_putchar(char c)
 {
 	write (1, &c, 1);
-}
-
-int	print_p(uintptr_t addr)
-{
-	int		count;
-
-	count = 0;
-	if (addr >= 16)
-		count += print_p(addr / 16);
-	write(1, &"0123456789abcdef"[addr % 16], 1);
-	count++;
-	return (count);
 }
 
 int	ft_percent(void)
@@ -54,9 +42,8 @@ int	display_specials(const char *str, va_list *args)
 		count = print_hex_top(va_arg(*args, int));
 	else if (*str == 'p')
 	{
-		write (1, "0x", 2);
-		count += 2;
-		count += print_p(va_arg(*args, uintptr_t));
+		uintptr_t	temp = va_arg(*args, uintptr_t);
+		count = check_value(temp);
 	}
 	else if (*str == '%')
 		count += ft_percent();
